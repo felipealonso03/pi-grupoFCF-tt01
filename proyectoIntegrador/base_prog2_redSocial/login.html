@@ -38,7 +38,15 @@
     <main>
         <section class="center main-content">
         <h1>Login</h1>
-        <p>Crear el formulario para ingresar al sitio.</p>
+        
+        <form action="loginForm">
+            <label for="nombreUsuario">Usuario o Email:</label>
+            <input type="text" id="usuarioEmail" name="usuarioEmail" required><br><br>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" name="contrasena" id="contrasena" required><br><br>
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+
         </section>
     </main>
 
