@@ -91,7 +91,7 @@ VALUES(DEFAULT,'Obra de arte',1,1),
 (DEFAULT,'Que hermosura',1,1),
 /*Segundo post*/
 (DEFAULT,'MASERATI POWER',2,1),
-(DEFAULT,'Quer ganas de sacarlo a rodar',2,1),
+(DEFAULT,'Que ganas de sacarlo a rodar',2,1),
 (DEFAULT,'Elegancia',2,1),
 (DEFAULT,'Amazing designe',2,1),
 /*Tercer post*/
@@ -115,7 +115,7 @@ VALUES(DEFAULT,'Obra de arte',1,1),
 (DEFAULT,'Elegancia y poder',6,3),
 (DEFAULT,'Cuantos caballos tiene??',6,3),
 /*Septimo post*/
-(DEFAULT,'Thye Shelby empire',7,4),
+(DEFAULT,'The Shelby empire',7,4),
 (DEFAULT,'Grandioso',7,4),
 (DEFAULT,'Los detalles en cada aspecto son increibles',7,4),
 (DEFAULT,'Una verdadera locura',7,4),
@@ -127,7 +127,7 @@ VALUES(DEFAULT,'Obra de arte',1,1),
 /*Noveno post*/
 (DEFAULT,'70s deluxe',9,5),
 (DEFAULT,'Que buena epoca',9,5),
-(DEFAULT,'Unjuguete de primera',9,5),
+(DEFAULT,'Un juguete de primera',9,5),
 (DEFAULT,'Increible',9,5),
 /*Decimo post*/
 (DEFAULT,'Japoneses a la carga',10,5),
