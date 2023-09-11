@@ -1,9 +1,11 @@
 const moduloDatos = {
-    usuario: {
-        nombreUsuario: "nombre",
+    usuarios: {
+        idUsuarios: "nombre",
         email: "email",
-        edad: "edad",
-        ubicacion: "lugar",
+        pass: "edad",
+        fotoPerfil: "lugar",
+        fecha: "fecha",
+        dni: "dni",
     },
     posteos: [
         {
