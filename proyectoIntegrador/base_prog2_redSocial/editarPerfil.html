@@ -38,7 +38,17 @@
     <main>
         <section class="center main-content">
         <h1>Editar perfil</h1>
-        <p>Crear el formulario para modificar los datos de perfil de un usuario.</p>
+        <form action="" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="fotoperfil">Foto de perfil (url):</label>
+            <input type="url" id="foto" name="foto"><br><br>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required><br><br>
+            <label for="confirmarContrasena">Confirmar Contraseña</label>
+            <input type="text" id="confirmarContrasena" name="confirmarContrasena"><br><br>
+            <button type="submit">Actualizar perfil</button>
+        </form>
         </section>
     </main>
 
