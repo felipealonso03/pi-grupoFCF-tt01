@@ -1,16 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const controlador = require("../controllers/postController")
 
 /* detalle posteos */
-router.get('/posteos/detalle', function(req, res) {
-  res.send('respond with a resource');
-});
+router.get('/posteos/aniadir', controladorPosteos.detallePosts);
+
+/* detalle posteos */
+router.get('/comentarios/detalle', controladorPosteos.aniadirPosts);
 
 /* añadir posteos */
-router.get('/posteos/añadir', function(req, res) {
-  res.send('respond with a resource');
-});
-
+router.get('/posteos/aniadir', controladorPosteos.detalleComentarios);
 
 module.exports = router;
-
