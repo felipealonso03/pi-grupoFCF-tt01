@@ -1,7 +1,7 @@
 const data = require("../db/data");
 
 const indexController = {
-    indice: function(req, res) {
+        indice: function(req, res) {
        
             return res.render('index', { info: data.posteos });
         },
@@ -12,6 +12,19 @@ const indexController = {
         login: function(req, res) {
        
             return res.render('login');
+        },
+        agregarPost: function(req, res) {
+       
+            return res.render('agregarPost');
+        },
+        detalleUsuario: function(req, res) {
+       
+            return res.render('detalleUsuario');
+        }
+        ,
+        detallePost: function(req, res) {
+       
+            return res.render('detallePost');
         }
 
     };

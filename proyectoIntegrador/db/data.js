@@ -33,7 +33,7 @@ const data = {
             nombreImagen:'Ferrari 250 GTO (1962)',
             url:'https://i.pinimg.com/564x/ac/f8/34/acf834ec57213dcdb6c15337501ecee8.jpg',
             piePosteo:'Cuando el lujo se encuentra con la velocidad.',
-            username: 'Fangio',
+            username: 'leon',
             comentarios: [
                 {
                     nombre:'marting',
@@ -58,6 +58,7 @@ const data = {
             nombreImagen:'Maserati 450 S (1956)',
             url:'https://i.pinimg.com/564x/7c/d8/5a/7cd85ab161560c8904e81e3ea43c9bb2.jpg',
             piePosteo:'Un vistazo al pasado con el Maserati 450 S',
+            username: 'marcosl',
             comentarios: [
                 {
                     nombre:'marting',
@@ -82,6 +83,7 @@ const data = {
             nombreImagen:'Ferrari 250 GT PF',
             url:'https://i.pinimg.com/564x/34/4d/5a/344d5ae4685a551bd5842f62234c6c74.jpg',
             piePosteo:'Sueños hechos realidad: el icónico Ferrari.',
+            username: 'leangigo',
             comentarios: [
                 {
                     nombre:'leon',
@@ -106,6 +108,7 @@ const data = {
             nombreImagen:'Datsun 240z',
             url:'https://i.pinimg.com/564x/d2/d1/e4/d2d1e43f3e83143388896070da16b613.jpg',
             piePosteo:'Un clásico que nunca pasa de moda.',
+            username: 'leangigo',
             comentarios: [
                 {
                     nombre:'leangigo',
@@ -130,6 +133,7 @@ const data = {
             nombreImagen:'1960 Aston Martin DB 4 GT',
             url:'https://i.pinimg.com/564x/1e/c0/15/1ec0157f4fdb50904651a55a2432629f.jpg',
             piePosteo:'El encanto intemporal de un clásico.',
+            username: 'gastonf',
             comentarios: [
                 {
                     nombre:'leon',
@@ -154,6 +158,7 @@ const data = {
             nombreImagen:'Golf Gti Cabriolet',
             url:'https://i.pinimg.com/564x/6c/1b/a7/6c1ba7fa64d4c63559d34ce5a912e8f9.jpg',
             piePosteo:'Deportividad al aire libre.',
+            username: 'marting',
             comentarios: [
                 {
                     nombre:'leon',
@@ -178,6 +183,7 @@ const data = {
             nombreImagen:'Shelby Cobra',
             url:'https://i.pinimg.com/564x/91/86/0d/91860d403362e9d668937997a2018784.jpg',
             piePosteo:'La herencia de la velocidad: El Shelby Cobra.',
+            username: 'marcosl',
             comentarios: [
                 {
                     nombre:'leon',
@@ -202,6 +208,7 @@ const data = {
             nombreImagen:'Lamborghini Countac',
             url:'https://i.pinimg.com/564x/0f/28/1e/0f281e4ef0982aea5e8652751aedece0.jpg',
             piePosteo:'Creado para romper récords y corazones.',
+            username: 'gastonf',
             comentarios: [
                 {
                     nombre:'marting',
@@ -226,6 +233,7 @@ const data = {
             nombreImagen:'1972 BMW Turbo',
             url:'https://i.pinimg.com/564x/d2/ad/79/d2ad7943b688b9ec3ee7e64b6721f53e.jpg',
             piePosteo:'1972 BMW Turbo & The Munich Olympics',
+            username: 'leon',
             comentarios: [
                 {
                     nombre:'marcosl',
@@ -250,6 +258,7 @@ const data = {
             nombreImagen:'Toyota Celica GT-Four 1989',
             url:'https://i.pinimg.com/564x/50/fa/88/50fa889def831c47e0f87148aa0e28e4.jpg',
             piePosteo:'El legado Toyota en el mundo de los deportivos.',
+            username: 'gastonf',
             comentarios: [
                 {
                     nombre:'marting',

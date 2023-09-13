@@ -16,11 +16,11 @@
                 <div class="info-usuario ">
                     <img src="https://via.placeholder.com/40" alt="">
                     <h4>
-                        <a href="detalleUsuario.html"><%= info[i].username %></a>
+                        <a href="/profile"><%= info[i].username %></a>
                     </h4>
                 </div>
                 <div class="post-body">
-                    <a href="detallePost.html">
+                    <a href="/postDetail">
                         <img src=<%= info[i].url %> alt="">
                     </a>
                 </div>
@@ -39,7 +39,7 @@
                         <% for( let x = 0; x < info[i].comentarios.length; x++ ) { %>
                         
                             <li>
-                                <a href="detalleUsuario.html"><%= info[i].comentarios[x].nombre %></a>
+                                <a href="/profile"><%= info[i].comentarios[x].nombre %></a>
                                 <span><%= info[i].comentarios[x].textoComent %></span>
                             </li>
                             <% } %>

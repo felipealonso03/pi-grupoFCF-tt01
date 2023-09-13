@@ -9,4 +9,7 @@ const controladorIndex = require('../controllers/indexController');
 router.get('/', controladorIndex.indice);
 router.get('/register',controladorIndex.registracion);
 router.get('/login',controladorIndex.login);
+router.get('/addpost',controladorIndex.agregarPost);
+router.get('/profile',controladorIndex.detalleUsuario);
+router.get('/postDetail',controladorIndex.detallePost)
 module.exports = router;
