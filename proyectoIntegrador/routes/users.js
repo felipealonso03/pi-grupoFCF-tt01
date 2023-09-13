@@ -1,11 +1,11 @@
-var express = require('express');
+const express = require('express');
 const controladorRegister = require('../controllers/userController');
-var router = express.Router();
+const router = express.Router();
 const controladorUser = require("../controllers/userController")
 const controladorLogin = require("../controllers/userController")
 
 /* GET users listing. */
-router.get('/', controladorUser.usuarios);
+router.get('/', controladorUser.infoUsario);
 
 /* Registro usuario */
 router.get("/", controladorRegister.infoUsario);

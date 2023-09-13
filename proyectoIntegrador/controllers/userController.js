@@ -1,22 +1,16 @@
-const data = require("../db/data/index")
+const data = require("../db/data")
 
 const controladorUser = {
     usuarios: function(req, res) {
-        res.render('index', {dato: data}); 
+        res.render('index', {data: data.data}); 
     }
 };
 module.exports = controladorUser;
 
 const controladorRegister = {
     infoUsario: function(req, res){
-        res.render("index", {dato: info.usuario})
+        res.render("index", {data: data.data.usuario})
     }
 };
 module.exports = controladorRegister;
 
-const controladorLogin = {
-    infoUsario: function(req, res){
-        res.render("index", {dato: data})
-    }
-};
-module.exports = controladorLogin;

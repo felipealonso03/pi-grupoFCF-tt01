@@ -10,18 +10,18 @@
     <main>
         <section class="center main-content">
 
-            <% for( let i = 0; i < dato.length; i++ ) { %>
+            <% for( let i = 0; i < info.length; i++ ) { %>
             
             <article class="post">
                 <div class="info-usuario ">
                     <img src="https://via.placeholder.com/40" alt="">
                     <h4>
-                        <a href="detalleUsuario.html"><%= dato[i].email %></a>
+                        <a href="detalleUsuario.html"><%= info[i].username %></a>
                     </h4>
                 </div>
                 <div class="post-body">
                     <a href="detallePost.html">
-                        <img src=<%= dato[i].url %> alt="">
+                        <img src=<%= info[i].url %> alt="">
                     </a>
                 </div>
                 <ul class="post-reacciones">
@@ -33,18 +33,20 @@
                     </li>
                 </ul>
                 <div class="post-comentarios">
-                    <h2><%= dato[i].piePosteo %></h2>
+                    <h2><%= info[i].piePosteo %></h2>
                     <h4>Comentarios</h4>
                     <ul>
-                        <% for( let x = 0; x < dato[i].comentarios.length; x++ ) { %>
+                        <% for( let x = 0; x < info[i].comentarios.length; x++ ) { %>
                         
-                        <li>
-                            <a href="detalleUsuario.html"><%= datos[i].comentarios[x].usuarios %></a>
-                            <span><%= dato[i].comentarios[x].comentarios %></span>
-                        </li>
-                        <% } %>
-                        <li>
+                            <li>
+                                <a href="detalleUsuario.html"><%= info[i].comentarios[x].nombre %></a>
+                                <span><%= info[i].comentarios[x].textoComent %></span>
+                            </li>
+                            <% } %>
 
+                    </ul>
+                    </div>
+                            
             <% } %>
 
         </section>    

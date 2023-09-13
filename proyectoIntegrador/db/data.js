@@ -1,4 +1,4 @@
-const info = {
+const data = {
     usuario: [
         {
             mail:'marting@gmail.com',
@@ -33,6 +33,7 @@ const info = {
             nombreImagen:'Ferrari 250 GTO (1962)',
             url:'https://i.pinimg.com/564x/ac/f8/34/acf834ec57213dcdb6c15337501ecee8.jpg',
             piePosteo:'Cuando el lujo se encuentra con la velocidad.',
+            username: 'Fangio',
             comentarios: [
                 {
                     nombre:'marting',
@@ -91,7 +92,7 @@ const info = {
                     textoComent:'Grandisimo',
                 },
                 {
-                    nombres:'leangigo',
+                    nombre:'leangigo',
                     textoComent:'Que año es?',
                 },
                 {
@@ -272,3 +273,5 @@ const info = {
     ],
     
 }
+
+module.exports = data;
