@@ -1,6 +1,8 @@
+const data = require("../db/data/index")
+
 const controladorIndex = {
     indexPosts: function(req, res) {
-    res.send('Todos los posteos se veran aqui')},
+    res.render('index', {dato: data.posteos})},
 };
 
-module.exports = controladorIndex
+module.exports = controladorIndex;

@@ -1,3 +1,5 @@
+const data = require("../db/data/index")
+
 const controladorPosteos = {
     aniadirPosts: function(req, res) {
         res.send('Añada un post')},

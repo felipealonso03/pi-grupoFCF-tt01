@@ -8,12 +8,12 @@ const controlador = require("../controllers/postController")
 router.get('/posteos/aniadir', controladorPosteos.detallePosts);
 
 /* añadir posteos */
-router.get('/comentarios/detalle', controladorPosteos.aniadirPosts);
+router.get('/posteos/detalle', controladorPosteos.aniadirPosts);
 
 /* detalle comentarios */
 router.get('/comentarios/detalle', controladorPosteos.detalleComentarios);
 
 /* añadir comentarios */
-router.get('/comentarios/aniadir', controladorPosteos.aniadirComentarios);
+router.get('/comentarios/aniadir', controladorPosteos.aniadirComentario);
 
 module.exports = router;
