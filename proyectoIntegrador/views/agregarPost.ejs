@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %>
+
+<body>
+
+    <%- include('./partials/header') %>
+
+    <main>
+        <section class="center main-content">
+        <h1>Nuevo Post</h1>
+        <form action="" method="get">
+            <label for="pieDeFoto">Pie de foto:</label><br><br>
+            <textarea name="pieDeFoto" id="pieDeFoto" cols="50" rows="4" placeholder="Escribe tu pie de foto aqui..."></textarea><br><br>
+            <label for="imagen">Subir imagen (url):</label>
+            <input type="url" id="imagen" name="imagen"><br><br>
+            <button type="submit">Publicar</button>
+        </form>
+        </section>
+    </main>
+
+    <%- include('./partials/footer') %>
+
+</body>
+
+</html>
