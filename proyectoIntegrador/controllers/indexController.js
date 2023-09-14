@@ -13,20 +13,13 @@ const indexController = {
        
             return res.render('login');
         },
-        agregarPost: function(req, res) {
-       
-            return res.render('agregarPost');
-        },
         detalleUsuario: function(req, res) {
        
             return res.render('detalleUsuario');
-        }
-        ,
-        detallePost: function(req, res) {
-       
-            return res.render('detallePost');
-        }
-
+        },
+        profileEdit: function(req, res) {
+            return res.render('editarPerfil')
+        },
     };
 
 

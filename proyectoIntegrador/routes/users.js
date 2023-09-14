@@ -8,7 +8,7 @@ const controladorLogin = require("../controllers/userController")
 router.get('/', controladorUser.infoUsario);
 
 /* Registro usuario */
-router.get("/", controladorRegister.infoUsario);
+router.get("/", controladorUser.infoUsario);
 
 /* Login usuario */
 router.get("/", controladorLogin.infoUsario);
