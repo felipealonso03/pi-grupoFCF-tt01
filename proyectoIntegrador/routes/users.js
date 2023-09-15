@@ -9,7 +9,7 @@ const controladorLogin = require("../controllers/userController")
 router.get('/', controladorUser.usuarios);
 
 /* Detalle usuario */
-router.get("/", controladorUser.detalleUsuario);
+router.get("/detail/:username", controladorUser.detalleUsuario);
 
 /* Login usuario */
 router.get("/", controladorLogin.infoUsario);

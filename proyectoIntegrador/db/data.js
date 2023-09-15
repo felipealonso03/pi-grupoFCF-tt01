@@ -34,6 +34,8 @@ const data = {
             url:'https://i.pinimg.com/564x/ac/f8/34/acf834ec57213dcdb6c15337501ecee8.jpg',
             piePosteo:'Cuando el lujo se encuentra con la velocidad.',
             username: 'leon',
+            fotoPerfil:'images/fanatico3.jpeg',
+
             comentarios: [
                 {
                     nombre:'marting',
@@ -59,6 +61,8 @@ const data = {
             url:'https://i.pinimg.com/564x/7c/d8/5a/7cd85ab161560c8904e81e3ea43c9bb2.jpg',
             piePosteo:'Un vistazo al pasado con el Maserati 450 S',
             username: 'marcosl',
+            fotoPerfil:'images/fanatico2.webp',
+
             comentarios: [
                 {
                     nombre:'marting',
@@ -84,6 +88,8 @@ const data = {
             url:'https://i.pinimg.com/564x/34/4d/5a/344d5ae4685a551bd5842f62234c6c74.jpg',
             piePosteo:'Sueños hechos realidad: el icónico Ferrari.',
             username: 'leangigo',
+            fotoPerfil:'images/fanatico4.webp',
+
             comentarios: [
                 {
                     nombre:'leon',
@@ -159,6 +165,8 @@ const data = {
             url:'https://i.pinimg.com/564x/6c/1b/a7/6c1ba7fa64d4c63559d34ce5a912e8f9.jpg',
             piePosteo:'Deportividad al aire libre.',
             username: 'marting',
+            fotoPerfil:'images/fanatico1.webp',
+
             comentarios: [
                 {
                     nombre:'leon',
@@ -259,6 +267,8 @@ const data = {
             url:'https://i.pinimg.com/564x/50/fa/88/50fa889def831c47e0f87148aa0e28e4.jpg',
             piePosteo:'El legado Toyota en el mundo de los deportivos.',
             username: 'gastonf',
+            fotoPerfil:'images/fanatico5.webp',
+
             comentarios: [
                 {
                     nombre:'marting',

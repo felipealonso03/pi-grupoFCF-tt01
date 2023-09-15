@@ -5,7 +5,6 @@ const postController = {
         return res.render('agregarPost');
     },
     detallePost: function(req, res) {
-       
         return res.render('detallePost');
     },
 }

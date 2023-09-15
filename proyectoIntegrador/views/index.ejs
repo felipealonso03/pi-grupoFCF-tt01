@@ -14,9 +14,9 @@
             
             <article class="post">
                 <div class="info-usuario ">
-                    <img src="https://via.placeholder.com/40" alt="">
+                    <img src="<%= info[0].username %>" alt="">
                     <h4>
-                        <a href="/user"><%= info[i].username %></a>
+                        <a href="users/detail/<%= info[i].username %>"><%= info[i].username %></a>
                     </h4>
                 </div>
                 <div class="post-body">
