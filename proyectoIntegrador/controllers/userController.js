@@ -7,5 +7,8 @@ const controladorUser = {
     infoUsario: function(req, res){
         res.render("index", {data: data.data.usuario})
     },
+    detalleUsuario: function(req, res) {
+        return res.render('detalleUsuario');
+    },
 };
 module.exports = controladorUser;

@@ -13,9 +13,8 @@ const indexController = {
        
             return res.render('login');
         },
-        detalleUsuario: function(req, res) {
-       
-            return res.render('detalleUsuario');
+        profile: function(req, res) {
+            return res.render('MiPerfil');
         },
         profileEdit: function(req, res) {
             return res.render('editarPerfil')

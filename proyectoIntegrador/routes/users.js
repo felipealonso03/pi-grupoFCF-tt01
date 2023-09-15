@@ -4,11 +4,12 @@ const router = express.Router();
 const controladorUser = require("../controllers/userController")
 const controladorLogin = require("../controllers/userController")
 
-/* GET users listing. */
-router.get('/', controladorUser.infoUsario);
 
-/* Registro usuario */
-router.get("/", controladorUser.infoUsario);
+/* GET users listing. */
+router.get('/', controladorUser.usuarios);
+
+/* Detalle usuario */
+router.get("/", controladorUser.detalleUsuario);
 
 /* Login usuario */
 router.get("/", controladorLogin.infoUsario);
