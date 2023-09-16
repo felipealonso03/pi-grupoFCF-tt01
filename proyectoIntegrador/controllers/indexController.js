@@ -14,7 +14,15 @@ const indexController = {
             return res.render('login');
         },
         profile: function(req, res) {
-            return res.render('MiPerfil');
+            let username = "leon"
+            let userFound = []
+            for (let i = 0; i < data.posteos.length; i++) {
+                if (username == data.posteos[i].username) {
+                    userFound.push(data.posteos[i])
+                }  
+            }
+        
+            return res.render('MiPerfil', {info: userFound});
         },
         profileEdit: function(req, res) {
             return res.render('editarPerfil')
