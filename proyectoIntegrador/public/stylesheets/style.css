@@ -115,7 +115,7 @@ main {
 .info-usuario img {
   margin-right: 10px;
   border-radius: 90%;
-  padding: 1px;
+  padding: 20px;
   border: 2px solid chocolate;
 }
 .post-reacciones {

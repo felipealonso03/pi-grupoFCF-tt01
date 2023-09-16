@@ -20,7 +20,7 @@
                     </h4>
                 </div>
                 <div class="post-body">
-                    <a href="/posteos/postDetail">
+                    <a href="/posteos/postDetail/<%= info[0].id %>">
                         <img src=<%= info[i].url %> alt="">
                     </a>
                 </div>
@@ -39,7 +39,7 @@
                         <% for( let x = 0; x < info[i].comentarios.length; x++ ) { %>
                         
                             <li>
-                                <a href="/profile"><%= info[i].comentarios[x].nombre %></a>
+                                <a href="/users/detail/<%= info[i].username %>"><%= info[i].comentarios[x].nombre %></a>
                                 <span><%= info[i].comentarios[x].textoComent %></span>
                             </li>
                             <% } %>

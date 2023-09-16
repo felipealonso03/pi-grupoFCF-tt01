@@ -5,7 +5,16 @@ const postController = {
         return res.render('agregarPost');
     },
     detallePost: function(req, res) {
-        return res.render('detallePost');
+        let id = req.params.id
+        
+        let userFound = []
+
+        for (let i = 0; i < data.posteos.length; i++) {
+            if(id == data.posteos[i].id){
+             userFound.push(data.posteos[i])
+            }
+         }
+         res.render("detallePost", {info: userFound})
     },
 }
 
