@@ -10,8 +10,17 @@ const controladorUser = require('../controllers/userController');
 
 router.get('/', controladorIndex.indice);
 
+/* mostrar formulario de registracion */
 router.get('/register',controladorIndex.registracion);
+
+/* Procesar los datos del formulario de REGISTER */
+router.post('/register',controladorIndex.almacen);
+
+/* mostrar formulario LOGIN */
 router.get('/login',controladorIndex.login);
+
+/* Procesar los datos del formulario de LOGIN */
+router.post('/login', controladorIndex.loginAlm)
 
 router.get('/user',controladorUser.detalleUsuario);
 

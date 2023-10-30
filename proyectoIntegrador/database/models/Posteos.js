@@ -1,53 +1,53 @@
-module.exports = function (sequelize , DataTypes) {
+module.exports = function (sequelize , dataTypes) {
 
     let alias = "Posteos";
 
     let cols = {
         idPosteos: {
             autoIncrement: true,
-            primeryKey: true,
-            type: DataTypes.INTEGER
+            primaryKey: true,
+            type: dataTypes.INTEGER
         },
         nombreImagen: {
-            type: DataTypes.STRING
+            type: dataTypes.STRING
 
         },
         url: {
-            type: DataTypes.STRING
+            type: dataTypes.STRING
 
         },
         piePosteo: {
-            type: DataTypes.STRING
+            type: dataTypes.STRING
 
         },
         idUsuarios: {
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
         }
     }
 
     let config = {
-        tableName: "comentarios",
+        tableName: "posteos",
         timestamps: false ,
         underscore: false
     }
 
-    let Comentario = sequelize.define(alias , cols , config);
+    let Posteos = sequelize.define(alias , cols , config);
 
-    Comentario.associate = function(models){
-        Comentario.belongsTo(models.Posteo, {
-            as:"commentToPost",
+    Posteos.associate = function(models){
+        Posteos.hasMany(models.Comentario, {
+            as:"postToComentario",
             /*through:"", --> SOLO SE USA DE MUCHOS A MUCHOS */ 
-            foreignKey:"idPosteos",
+            foreignKey:"idUsuarios",
             /*otherKey:"", --> SOLO SE USA DE MUCHOS A MUCHOS */
             timestamps:true
         });
-        Comentario.belongsTo(models.Usuario, {
-            as:"commentToUser",
+        Posteos.belongsTo(models.Usuario, {
+            as:"postTouser",
             foreignKey:"idUsuarios",
             timestamps:true
         });
     }
 
-    return Posteo;
+    return Posteos;
 
 }
