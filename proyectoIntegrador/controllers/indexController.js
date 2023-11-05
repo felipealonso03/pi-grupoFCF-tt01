@@ -15,7 +15,7 @@ const indexController = {
             let user = {
                 nombre: info.nombre,
                 email: info.email,
-                contrasena: bcrypt.hashSync(info.contrasena, 10)
+                contrasena: bcrypt.hashSync(info.contrasena, 10) 
             };
             data.usuario.create(user)
             .then((result)=>{
@@ -24,6 +24,12 @@ const indexController = {
                 return console.log(error);
             })
         },
+        almacen: function (req,res) {
+            res.send("almacen")
+            
+        }
+        ,
+
 
         loginAlm: function(req,res){
             let emailBuscado = req.body.email;

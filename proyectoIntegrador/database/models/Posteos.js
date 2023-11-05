@@ -34,14 +34,14 @@ module.exports = function (sequelize , dataTypes) {
     let Posteos = sequelize.define(alias , cols , config);
 
     Posteos.associate = function(models){
-        Posteos.hasMany(models.Comentario, {
+        Posteos.hasMany(models.Comentarios, {
             as:"postToComentario",
             /*through:"", --> SOLO SE USA DE MUCHOS A MUCHOS */ 
             foreignKey:"idUsuarios",
             /*otherKey:"", --> SOLO SE USA DE MUCHOS A MUCHOS */
             timestamps:true
         });
-        Posteos.belongsTo(models.Usuario, {
+        Posteos.belongsTo(models.Usuarios, {
             as:"postTouser",
             foreignKey:"idUsuarios",
             timestamps:true

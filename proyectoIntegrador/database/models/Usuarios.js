@@ -47,24 +47,24 @@ module.exports = function (sequelize , dataTypes) {
         underscore: false
     }
 
-    let Usuario = sequelize.define(alias , cols , config);
+    let Usuarios = sequelize.define(alias , cols , config);
     
 
-    Usuario.associate = function(models){
-        Usuario.hasMany(models.Posteo, {
+    Usuarios.associate = function(models){
+        Usuarios.hasMany(models.Posteos, {
             as:"usuariosToPost",
             /*through:"", --> SOLO SE USA DE MUCHOS A MUCHOS */ 
             foreignKey:"idUsuarios",
             /*otherKey:"", --> SOLO SE USA DE MUCHOS A MUCHOS */
             timestamps:true
         });
-        Usuario.hasMany(models.Comentario, {
+        Usuarios.hasMany(models.Comentarios, {
             as:"usuarioToComment",
             foreignKey:"idUsuarios",
             timestamps:true
         });
     }
 
-    return Usuario;
+    return Usuarios;
 
 }

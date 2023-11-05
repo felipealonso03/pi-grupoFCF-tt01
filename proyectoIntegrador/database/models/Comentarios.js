@@ -26,23 +26,23 @@ module.exports = function (sequelize , dataTypes) {
         underscore: false
     }
 
-    let Comentario = sequelize.define(alias , cols , config);
+    let Comentarios = sequelize.define(alias , cols , config);
 
-    Comentario.associate = function(models){
-        Comentario.belongsTo(models.Posteo, {
+    Comentarios.associate = function(models){
+        Comentarios.belongsTo(models.Posteos, {
             as:"commentToPost",
             /*through:"", --> SOLO SE USA DE MUCHOS A MUCHOS */ 
             foreignKey:"idPosteos",
             /*otherKey:"", --> SOLO SE USA DE MUCHOS A MUCHOS */
-            timestamps:true
+            timestamps:false
         });
-        Comentario.belongsTo(models.Usuario, {
+        Comentarios.belongsTo(models.Usuarios, {
             as:"commentToUser",
             foreignKey:"idUsuarios",
             timestamps:true
         });
     }
 
-    return Comentario;
+    return Comentarios;
 
 }
