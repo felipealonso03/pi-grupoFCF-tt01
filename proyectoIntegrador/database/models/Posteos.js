@@ -37,14 +37,13 @@ module.exports = function (sequelize , dataTypes) {
         Posteos.hasMany(models.Comentarios, {
             as:"postToComentario",
             /*through:"", --> SOLO SE USA DE MUCHOS A MUCHOS */ 
-            foreignKey:"idUsuarios",
+            foreignKey:"idPosteos",
             /*otherKey:"", --> SOLO SE USA DE MUCHOS A MUCHOS */
-            timestamps:true
-        });
+          
+        })
         Posteos.belongsTo(models.Usuarios, {
-            as:"postTouser",
+            as:"postToUser",
             foreignKey:"idUsuarios",
-            timestamps:true
         });
     }
 

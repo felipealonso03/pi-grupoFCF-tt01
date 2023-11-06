@@ -1,4 +1,5 @@
 const data = require("../db/data");
+const dab = require("../database/models");
 
 const postController = {
     agregarPost: function(req, res) {

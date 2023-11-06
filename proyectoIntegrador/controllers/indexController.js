@@ -1,10 +1,26 @@
-const data = require("../db/data");
 const bcrypt = require('bcryptjs');
+const dab = require("../database/models");
+const post = dab.Posteos
+
 
 const indexController = {
         indice: function(req, res) {
+
+           let filtro = {
+            include:[
+                {association:"postToUser"},
+                {association:"postToComentario",
+                include: [ {association:"commentToUser"} ] }
+            ]};
        
-            return res.render('index', { info: data.posteos });
+            post.findAll(filtro)
+            .then((result) => {
+                
+              return res.render("index",{listaPosteo: result})
+            }).catch((error)=>{
+                return res.send(error);
+            });
+
         },
         registracion: function(req, res) {
        

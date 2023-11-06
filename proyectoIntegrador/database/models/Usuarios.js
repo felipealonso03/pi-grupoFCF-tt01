@@ -56,12 +56,10 @@ module.exports = function (sequelize , dataTypes) {
             /*through:"", --> SOLO SE USA DE MUCHOS A MUCHOS */ 
             foreignKey:"idUsuarios",
             /*otherKey:"", --> SOLO SE USA DE MUCHOS A MUCHOS */
-            timestamps:true
         });
         Usuarios.hasMany(models.Comentarios, {
             as:"usuarioToComment",
             foreignKey:"idUsuarios",
-            timestamps:true
         });
     }
 

@@ -34,12 +34,10 @@ module.exports = function (sequelize , dataTypes) {
             /*through:"", --> SOLO SE USA DE MUCHOS A MUCHOS */ 
             foreignKey:"idPosteos",
             /*otherKey:"", --> SOLO SE USA DE MUCHOS A MUCHOS */
-            timestamps:false
-        });
+        })
         Comentarios.belongsTo(models.Usuarios, {
             as:"commentToUser",
             foreignKey:"idUsuarios",
-            timestamps:true
         });
     }
 
