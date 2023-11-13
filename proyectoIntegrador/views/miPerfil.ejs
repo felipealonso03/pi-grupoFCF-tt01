@@ -5,17 +5,25 @@
 
 <body>
 
-    <%- include('./partials/header') %>
+    <% if (locals.user != undefined) { %>
+     
+        <%- include('./partials/headerLog') %>
+
+        <% } else { %>
+         
+            <%- include('./partials/header') %>
+            
+    <% } %>
 
     <main>
         <div class="user-detail container">
             <section class="top main-content">
-                <img class="profile" src="<%= info[0].fotoPerfil %>" alt="">
+                <img class="profile" src="<%= listaPosteo[i].postToUser.fotoPerfil %>" alt="">
                 <div class="info-usuario">
-                    <p><%= info[0].username %></p> 
+                    <p><%= listaPosteo[i].postToUser.email %></p> 
                     <a class="follow" href="/profile/edit"><i class="fa-solid fa-user-gear"></i></a>
                     <ul class="meta">
-                        <li>100 post</li>
+                        <li><%= listaPosteo[i].idPosteos.length %></li>
                         <li>200 seguidores</li>
                         <li>300 seguidos</li>
                     </ul>
@@ -23,11 +31,11 @@
             </section>
             <section class="bottom">
                 <article class="post">
-                    <% for( let i = 0; i < info.length; i++ ) { %>
+                    <% for( let i = 0; i < listaPosteo.length; i++ ) { %>
                     
                     
-                    <a href="/posteos/postDetail/<%= info[0].id %>">
-                        <img src="<%= info[i].url %>" alt="">
+                    <a href="/posteos/postDetail/<%= listaPosteo[i].postToUser.email %>">
+                        <img src="<%= listaPosteo[i].url %>" alt="">
                     </a>
                     <% } %>
                 </article>

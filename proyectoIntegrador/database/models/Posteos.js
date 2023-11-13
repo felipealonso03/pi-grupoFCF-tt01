@@ -22,12 +22,23 @@ module.exports = function (sequelize , dataTypes) {
         },
         idUsuarios: {
             type: dataTypes.INTEGER
+        },
+        createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
+
+        },
+        deletedAt: {
+            type: dataTypes.DATE
+
         }
     }
 
     let config = {
         tableName: "posteos",
-        timestamps: false ,
+        timestamps: true ,
         underscore: false
     }
 

@@ -5,8 +5,15 @@
 
 <body>
 
-    <%- include('./partials/header') %> 
+    <% if (locals.user != undefined) { %>
+     
+        <%- include('./partials/headerLog') %>
 
+        <% } else { %>
+         
+            <%- include('./partials/header') %>
+            
+    <% } %>
     <main>
         <div class="post-detail container">
             <section class="center main-content post">

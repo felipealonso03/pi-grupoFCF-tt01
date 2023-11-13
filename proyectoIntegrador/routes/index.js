@@ -13,8 +13,9 @@ router.get('/', controladorIndex.indice);
 /* mostrar formulario de registracion */
 router.get('/register',controladorIndex.registracion);
 
+
 /* Procesar los datos del formulario de REGISTER */
-router.post('/register',controladorIndex.almacen);
+router.post('/register',controladorIndex.store);
 
 /* mostrar formulario LOGIN */
 router.get('/login',controladorIndex.login);
