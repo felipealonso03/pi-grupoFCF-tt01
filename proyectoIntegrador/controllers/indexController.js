@@ -24,13 +24,14 @@ const indexController = {
         },
         registracion: function(req, res) {
            let errors = {};
-
+         
             if(req.body.email == ''){
                 errors.message = "El campo del email no puede estar vacio"
 
                 res.locals.errors = errors
+            
                 return res.render('registracion')
-            }else if (req.body.contrasena.length < 4){
+            }else if (req.body.pass.length < 4){
                 errors.message = "La contraseña no puede tener menos de 4 caracteres"
                 res.locals.errors = errors
 
@@ -72,7 +73,7 @@ const indexController = {
             let user = {
                 nombre: info.nombre,
                 email: info.email,
-                contrasena: bcrypt.hashSync(info.contrasena, 10) 
+                contrasena: bcrypt.hashSync(info.pass, 10) 
             };
     
             dab.Usuarios.create(user)
@@ -84,7 +85,7 @@ const indexController = {
         },
         loginAlm: function(req,res){
             let emailBuscado = req.body.usuarioEmail;
-            let contra = req.body.contrasena;
+            let contra = req.body.pass;
             let recordarme = req.body.recordarme;
             let criterio = {
                 where: [{email: emailBuscado}]

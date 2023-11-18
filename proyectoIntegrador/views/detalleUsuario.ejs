@@ -18,9 +18,9 @@
     <main>
         <div class="user-detail container">
             <section class="top main-content">
-                <img class="profile" src="<%= info[0].fotoPerfil %>" alt="">
+                <img class="profile" src="<%= listaPosteo[i].postToUser.fotoPerfil %>" alt="">
                 <div class="info-usuario">
-                    <p><%= info[0].username %></p>
+                    <p><%= listaPosteo[i].postToUser.email %></p>
                     <a class="follow" href="">seguir</a>
                     <ul class="meta">
                         <li>100 post</li>
@@ -30,11 +30,11 @@
                 </div>
             </section>
             <section class="bottom">
-                    <% for( let i = 0; i < info.length; i++ ) { %>
+                    <% for( let i = 0; i < listaPosteo.length; i++ ) { %>
                         <article class="post">   
                     
                     <a href="/postDetail">
-                        <img src="<%= info[i].url %>" alt="">
+                        <img src="<%= listaPosteo[i].url %>" alt="">
                     </a>
                     </article>
                     <% } %>
