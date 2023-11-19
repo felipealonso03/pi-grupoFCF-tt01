@@ -14,11 +14,42 @@
             <%- include('./partials/header') %>
             
     <% } %>
+
     <main>
+
         <section class="center main-content">
-        <h1>Resultados de búsqueda.</h1>
-        <p>Construir la vista.</p>
+        <h1>Resultados de búsqueda:</h1>
+
+            <div>
+                <% if (listaPosteos.length == 0){ %>
+                    <p>No hay resultados para su criterio de búsqueda</p>
+                <% }else {%>
+                    <% for (let i=0; i < listaPosteos.length ; i++) { %>
+
+                        <div class="post-body">
+
+                            <a href="/posteos/postDetail/<%= listaPosteo[i].idUsuarios %>">
+                                <figure>
+                                    <img src="<%- listaPosteo[i].fotoPerfil %>"
+                                        alt="<%= listaPosteo[i].nombre %>">
+                                </figure>
+                                <article>
+                                    <h2>
+                                        <%= listaPosteo[i].nombre %>
+                                    </h2>
+                                    <p>Comentarios: <%= listaPosteo[i].postToComentario.length %>
+                                    </p>
+                                </article>
+                            </a>
+
+                        </div>
+                    <% } %>
+                <% } %>
+
+            </div>
+                        
         </section>
+
     </main>
 
     <%- include('./partials/footer') %>
