@@ -1,5 +1,6 @@
-const data = require("../db/data")
+const bcrypt = require('bcryptjs');
 const dab = require("../database/models");
+const post = dab.Posteos
 
 const controladorUser = {
     usuarios: function(req, res) {

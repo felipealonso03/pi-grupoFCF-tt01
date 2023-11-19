@@ -1,21 +1,42 @@
-const data = require("../db/data");
-const dab = require("../database/models");
+const bcrypt = require('bcryptjs');
+const dab = require("../database/models/Posteos");
+const post = dab.Posteos
+const comm = dab.Usuarios
 
 const postController = {
     agregarPost: function(req, res) {
-        return res.render('agregarPost');
+        return res.render('agregarPost', { usuarioLogueado: true });
     },
     detallePost: function(req, res) {
         let id = req.params.id
-        
-        let userFound = []
 
-        for (let i = 0; i < data.posteos.length; i++) {
-            if(id == data.posteos[i].id){
-             userFound.push(data.posteos[i])
+        post.findByPk(id, {
+            include:[
+                {
+                association:"postToComentario",
+                include: [ {association:"commentToUser"} ]
+                },
+                {association:"postToUser"}
+            ],
+            orden: [
+                ["postToComentario","createdAt","DESC"]
+            ]
+        }).then((result)=> {
+            return res.render('detallePost',{post:result , usuarioLogueado: true})
+        })
+        .catch((error) => {
+            return res.send(error)
+        })
+        
+        /* let userFound = []
+
+        for (let i = 0; i < dab.length; i++) {
+            if(id == dab[i].id){
+             userFound.push(dab[i])
             }
          }
-         res.render("detallePost", {info: userFound})
+         res.render("detallePost", {userFound})*/
+        
     },
 }
 
