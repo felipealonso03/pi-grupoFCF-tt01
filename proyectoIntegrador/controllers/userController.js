@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 const dab = require("../database/models");
-const post = dab.Posteos
+const user = dab.Usuarios
 
 const controladorUser = {
     usuarios: function(req, res) {
@@ -10,7 +10,25 @@ const controladorUser = {
         res.render("index", {data: data.data.usuario})
     },
     detalleUsuario: function(req, res) {
-        let username = req.params.username
+
+        let idUser = req.params.id;
+        user.findByPk(idUser,{
+            include: [
+                {
+                    association:"usuariosToPost",
+                    include: [{association:"postToComentario"}]
+                }
+            ]
+        }).then((result)=> {
+            return res.render('detalleUsuario',{user:result, usuarioLog: true})
+        })
+        .catch((error) => {
+            return res.send("error");
+        }); 
+
+
+
+        /*let username = req.params.username
         
         let userFound = []
 
@@ -20,7 +38,7 @@ const controladorUser = {
             }
          }
          console.log(userFound);
-         res.render("detalleUsuario", {info: userFound})
+         res.render("detalleUsuario", {info: userFound}) */
     },
 };
 module.exports = controladorUser;

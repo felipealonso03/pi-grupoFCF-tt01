@@ -9,14 +9,18 @@ const indexController = {
             include:[
                 {association:"postToUser"},
                 {association:"postToComentario",
-                include: [ {association:"commentToUser"} ] }
-            ]};
+                include: [ {association:"commentToUser"} ] 
+            }], 
+            orden: [
+                ["created_At","DESC"]
+            ]
+            };
        
             post.findAll(filtro)
             .then((result) => {
-                
+               
               /*si quiero ver database --> return res.send(result) */
-              return res.render("index",{listaPosteo: result})
+              return res.render("index",{listaPosteo: result , usuarioLog: false})
             }).catch((error)=>{
                 return res.send(error);
             });
@@ -24,6 +28,7 @@ const indexController = {
         },
         registracion: function(req, res) {
            let errors = {};
+           
          
             if(req.body.email == ''){
                 errors.message = "El campo del email no puede estar vacio"
@@ -31,7 +36,7 @@ const indexController = {
                 res.locals.errors = errors
             
                 return res.render('registracion')
-            }else if (req.body.pass.length < 4){
+            }else if (req.body.password.length < 4){
                 errors.message = "La contraseña no puede tener menos de 4 caracteres"
                 res.locals.errors = errors
 
@@ -40,7 +45,7 @@ const indexController = {
                 let user = {
                     nombre:req.body.email,
                     email:req.body.email,
-                    clave:bcrypt.hashSync(req.body.pass,10),
+                    clave:bcrypt.hashSync(req.body.password,10),
                     fechaN:req.body.dni,
                     fotoPerfil:req.body.fotoPerfil
                 }
@@ -73,7 +78,7 @@ const indexController = {
             let user = {
                 nombre: info.nombre,
                 email: info.email,
-                contrasena: bcrypt.hashSync(info.pass, 10) 
+                contrasena: bcrypt.hashSync(info.password, 10) 
             };
     
             dab.Usuarios.create(user)
@@ -85,7 +90,7 @@ const indexController = {
         },
         loginAlm: function(req,res){
             let emailBuscado = req.body.usuarioEmail;
-            let contra = req.body.pass;
+            let contra = req.body.password;
             let recordarme = req.body.recordarme;
             let criterio = {
                 where: [{email: emailBuscado}]
@@ -130,8 +135,17 @@ const indexController = {
             return res.render('MiPerfil', {listaPosteo: userFound});
         },
         profileEdit: function(req, res) {
-            return res.render('editarPerfil')
-        },
+
+            if(req.session.user != undefined){
+                return res.render('editarPerfil',{usuario: req.session.user, usuarioLog: true})
+            } else {
+                return res.render('login')
+            }
+        }, 
+        logout: function (req,res) {
+            req.session.user = undefined
+            return res.redirect('/')
+        }
     };
 
 
