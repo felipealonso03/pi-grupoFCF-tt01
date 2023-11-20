@@ -28,14 +28,7 @@ const postController = {
             return res.send(error)
         })
         
-        /* let userFound = []
-
-        for (let i = 0; i < dab.length; i++) {
-            if(id == dab[i].id){
-             userFound.push(dab[i])
-            }
-         }
-         res.render("detallePost", {userFound})*/
+      
         
     },
 }

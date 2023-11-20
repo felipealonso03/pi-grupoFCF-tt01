@@ -26,19 +26,6 @@ const controladorUser = {
             return res.send("error");
         }); 
 
-
-
-        /*let username = req.params.username
-        
-        let userFound = []
-
-        for (let i = 0; i < data.posteos.length; i++) {
-            if(username == data.posteos[i].username){
-             userFound.push(data.posteos[i])
-            }
-         }
-         console.log(userFound);
-         res.render("detalleUsuario", {info: userFound}) */
     },
 };
 module.exports = controladorUser;
