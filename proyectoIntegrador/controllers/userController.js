@@ -26,6 +26,6 @@ const controladorUser = {
             return res.send("error");
         }); 
 
-    },
+    }
 };
 module.exports = controladorUser;

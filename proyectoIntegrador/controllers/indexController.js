@@ -36,12 +36,15 @@ const indexController = {
                 res.locals.errors = errors
             
                 return res.render('registracion')
-            }else if (req.body.password.length < 4){
+            }
+             else if (req.body.contrasena.length < 4){
                 errors.message = "La contraseña no puede tener menos de 4 caracteres"
                 res.locals.errors = errors
 
                 return res.render("registracion")
-            }else{
+
+            }
+             else{
                 let user = {
                     nombre:req.body.email,
                     email:req.body.email,
