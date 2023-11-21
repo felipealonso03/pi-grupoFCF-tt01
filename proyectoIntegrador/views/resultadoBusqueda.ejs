@@ -21,28 +21,46 @@
         <h1>Resultados de búsqueda:</h1>
 
             <div>
-                <% if (listaPosteos.length == 0){ %>
+                <% if (listaPosteo.length == 0){ %>
                     <p>No hay resultados para su criterio de búsqueda</p>
                 <% }else {%>
                     <% for (let i=0; i < listaPosteos.length ; i++) { %>
 
-                        <div class="post-body">
+                        <article class="post">
+                            <div class="info-usuario ">
+                                <img src="<%= listaPosteo[i].postToUser.fotoPerfil %>" alt="">
+                                <h4>
+                                    <a href="users/detail/<%= listaPosteo[i].postToUser.idUsuarios %>"><%= listaPosteo[i].postToUser.email %></a>
+                                </h4>
+                            </div>
+                            <div class="post-body">
+                                <a href="/posteos/postDetail/<%= listaPosteo[i].idUsuarios %>">
+                                    <img src="<%= listaPosteo[i].url %>" alt="">
+                                </a>
+                            </div>
+                            <ul class="post-reacciones">
+                                <li>
+                                    <i class="fa-regular fa-heart"></i>
+                                </li>
+                                <li>
+                                    <i class="fa-regular fa-comment"></i>
+                                </li>
+                            </ul>
+                            <div class="post-comentarios">
+                                <h2><%= listaPosteo[i].piePosteo %></h2>
+                                <h4>Comentarios</h4>
+                                <ul>
+                                    <% for( let x = 0; x < listaPosteo[i].postToComentario.length; x++ ) { %>
+                                    
+                                        <li>
+                                            <a href="/users/detail/<%= listaPosteo[i].postToComentario[x].idUsuarios %>"><%= listaPosteo[i].postToComentario[x].commentToUser.email %></a>
+                                            <span><%= listaPosteo[i].postToComentario[x].textoComent %></span>
+                                        </li>
+                                        <% } %>
+            
+                                </ul>
+                                </div>
 
-                            <a href="/posteos/postDetail/<%= listaPosteo[i].idUsuarios %>">
-                                <figure>
-                                    <img src="<%- listaPosteo[i].fotoPerfil %>"
-                                        alt="<%= listaPosteo[i].nombre %>">
-                                </figure>
-                                <article>
-                                    <h2>
-                                        <%= listaPosteo[i].nombre %>
-                                    </h2>
-                                    <p>Comentarios: <%= listaPosteo[i].postToComentario.length %>
-                                    </p>
-                                </article>
-                            </a>
-
-                        </div>
                     <% } %>
                 <% } %>
 

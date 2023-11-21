@@ -2,6 +2,7 @@ const bcrypt = require('bcryptjs');
 const dab = require("../database/models");
 const post = dab.Posteos
 const comm = dab.Usuarios
+const op = dab.Sequelize.Op
 
 const postController = {
     agregarPost: function(req, res) {
@@ -44,6 +45,26 @@ const postController = {
             return res.send(error)
         })
         
+    },
+    busquedaPost : function(req,res){
+        let busqueda = req.query.busqueda;
+        post.findAll ({
+            include: {
+                all: true,
+                nested: true
+            },
+            where: {
+                piePosteo: {[op.like] : "%" + busqueda + "%"}
+            },
+            order:[['updatedAt', 'DESC']]
+        })
+        .then((listaPosteo)=>{
+            res.render('resultadoBusqueda', {listaPosteo: listaPosteo});
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+
     }
 }
 
