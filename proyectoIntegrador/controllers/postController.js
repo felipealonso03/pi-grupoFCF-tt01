@@ -38,7 +38,7 @@ const postController = {
         
     },
     busquedaPost : function(req,res){
-        let busqueda = req.query.busqueda;
+        let busqueda = req.query.search;
         post.findAll ({
             include: {
                 all: true,
