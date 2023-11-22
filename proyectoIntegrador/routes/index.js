@@ -29,6 +29,6 @@ router.get('/profile',controladorIndex.profile);
 
 router.get('/profile/edit', controladorIndex.profileEdit);
 
-router.post('/',controladorIndex.logout);
+router.post('/logout',controladorIndex.logout);
 
 module.exports = router;

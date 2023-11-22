@@ -10,8 +10,7 @@ const controladorUser = {
         res.render("index", {data: data.data.usuario})
     },
     detalleUsuario: function(req, res) {
-
-        let idUser = req.params.id;
+        let idUser = req.params.username;
         user.findByPk(idUser,{
             include: [
                 {
@@ -20,6 +19,7 @@ const controladorUser = {
                 }
             ]
         }).then((result)=> {
+            console.log(result)
             return res.render('detalleUsuario',{user:result, usuarioLog: true})
         })
         .catch((error) => {

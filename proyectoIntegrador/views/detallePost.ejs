@@ -4,7 +4,7 @@
 <%- include('./partials/head') %>
 
 <body>
-
+    <% console.log(post) %>
     <% if (locals.user != undefined) { %>
      
         <%- include('./partials/headerLog') %>
@@ -19,9 +19,9 @@
             <section class="center main-content post">
                 <div class="info-usuario">
                     <img src="https://via.placeholder.com/40" alt="">
-                    <p><a href="detalleUsuario.html"><%= post.postToUser.email %></a></p>
+                    <p><a href="detalleUsuario.ejs"><%= post.id %></a></p>
                 </div>
-                <img class="photo" src="<%= post[i].url %>" alt="">
+                <img class="photo" src="<%= post.url %>" alt="">
             </section>
             <section class="right">
                 <h4>Comentarios</h4>
@@ -35,16 +35,7 @@
                         <article class="comment">
                             <img src="https://via.placeholder.com/40" alt="">
                             <section class="content">
-                                <ul>
-                                    <% for( let x = 0; x < post[i].postToComentario.length; x++ ) { %>
-                                    
-                                        <li>
-                                            <a href="/users/detail/<%= post[i].postToComentario[x].idUsuarios %>"><%= listaPosteo[i].postToComentario[x].commentToUser.email %></a>
-                                            <span><%= post[i].postToComentario[x].textoComent %></span>
-                                        </li>
-                                        <% } %>
-            
-                                </ul>
+                                
                             </section>
                         </article>
                     </div>

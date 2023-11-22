@@ -9,23 +9,14 @@ const postController = {
         return res.render('/addpost', { usuarioLogueado: true });
     },
     detallePost: function(req, res) {
-        let id = req.params.idPosteos
-
-        dab.Posteos.findByPk(id, {
-            include:[
-                {
-                association:"postToComentario",
-                include: [ {association:"commentToUser"} ]
-                },
-                {association:"postToUser"}
-            ],
-            orden: [
-                ["postToComentario","createdAt","DESC"]
-            ]
-        }).then((result)=> {
-            return res.render('detallePost',{post:result , usuarioLogueado: true})
+        let id = req.params.id
+        dab.Posteos.findByPk(id,{
+            include:[{all:true, nested: true}]
         })
-        .catch((error) => {
+        .then(function(result){
+            return res.render('detallePost', {post: result})
+        })
+        .catch(function(error){
             return res.send(error)
         })
         
@@ -68,4 +59,4 @@ const postController = {
     }
 }
 
-module.exports = postController;
+module.exports = postController; 
