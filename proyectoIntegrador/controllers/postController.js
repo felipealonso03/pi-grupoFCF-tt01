@@ -6,7 +6,8 @@ const comm = dab.Comentarios
 
 const postController = {
     agregarPost: function(req, res) {
-        return res.render('/addpost', { usuarioLogueado: true });
+
+        return res.render("agregarPost");
     },
     detallePost: function(req, res) {
         let id = req.params.id
@@ -14,6 +15,7 @@ const postController = {
             include:[{all:true, nested: true}]
         })
         .then(function(result){
+            
             return res.render('detallePost', {post: result})
         })
         .catch(function(error){
@@ -22,14 +24,16 @@ const postController = {
         
     },
     nuevoPost : function(req,res){
+        
         let nuevo = {
-            userId : req.session.user.idUsuarios,
+            idUsuarios : req.session.user.idUsuarios,
             url : req.body.url,
-            pieImg : req.body.piePosteo
+            piePosteo : req.body.piePosteo,
+            nombreImagen: req.body.nombreImagen
         }
-        dab.Posteos.create(this.nuevoPost)
+        dab.Posteos.create(nuevo)
         .then(result =>{
-            return res.redirect('/newpost')
+            return res.redirect('/')
         })
         .catch((error)=> {
         

@@ -4,6 +4,8 @@ const router = express.Router();
 
 router.get('/addpost', postController.agregarPost); 
 
+router.post('/addpost',postController.nuevoPost);
+
 router.get('/postDetail/:id',postController.detallePost);
 
 router.get("/resultadoBusqueda", postController.busquedaPost);

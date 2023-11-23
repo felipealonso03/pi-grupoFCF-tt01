@@ -21,8 +21,9 @@ const indexController = {
             post.findAll(filtro)
             .then((result) => {
                 
-              /*si quiero ver database --> return res.send(result) */
-              return res.render("index",{listaPosteo: result , usuarioLog: false})
+              
+            //return res.send(result)
+              return res.render("index",{listaPosteo: result})
             }).catch((error)=>{
                 return res.send(error);
             });

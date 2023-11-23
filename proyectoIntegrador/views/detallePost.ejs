@@ -35,7 +35,7 @@
                         <article class="comment">
                             <img src="https://via.placeholder.com/40" alt="">
                             <section class="content">
-                                <% for( let i = 0; i < post.postToComentario[i].length; x++ ) { %>
+                                <% for( let i = 0; i < post.postToComentario.length; i++ ) { %>
                                     <li>
                                         <a href="/users/detail/<%= post.postToComentario[i].idUsuarios %>"><%= post.postToComentario[i].commentToUser.email %></a>
                                         <span><%= post.postToComentario[i].textoComent %></span>
