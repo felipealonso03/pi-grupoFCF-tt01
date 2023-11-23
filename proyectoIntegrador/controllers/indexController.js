@@ -1,6 +1,8 @@
+const session = require('express-session');
 const bcrypt = require('bcryptjs');
 const dab = require("../database/models");
 const post = dab.Posteos
+const usuarios = dab.Usuarios
 
 const indexController = {
         indice: function(req, res) {
@@ -112,17 +114,19 @@ const indexController = {
             
             return res.render('login');
         },
-        profile: function(req, res) {
-            let username = listaPosteo.postToUser.email
-            let userFound = []
-            for (let i = 0; i < listaPosteo.idPosteos[i].length; i++) {
-                if (username == listaPosteo.postToUser.email) {
-                    userFound.push(listaPosteo.idPosteos[i])
-                }  
-            }
         
-            return res.render('MiPerfil', {listaPosteo: userFound});
-        },
+    profile: function (req, res) {
+
+        let usuario = req.session.user;
+        usuarios.findByPk(usuario.dataValues.idUsuarios, { include: [{ all: true, nested: true }], order: [["createdAt", "DESC"]] })
+        console.log(usuario)   
+            .then(function (result) {
+            
+                return res.send(result)
+                res.render("MiPerfil", { datos: result })
+            })
+            .catch(error => console.log(error))
+    },
         profileEdit: function(req, res) {
 
             if(req.session.user != undefined){
