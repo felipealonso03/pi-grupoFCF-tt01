@@ -118,8 +118,7 @@ const indexController = {
     profile: function (req, res) {
 
         let usuario = req.session.user;
-        usuarios.findByPk(usuario.dataValues.idUsuarios, { include: [{ all: true, nested: true }], order: [["createdAt", "DESC"]] })
-        console.log(usuario)   
+        post.findAll(usuario.idUsuarios)
             .then(function (result) {
             
                 
