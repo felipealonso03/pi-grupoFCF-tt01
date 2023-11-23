@@ -1,8 +1,8 @@
 const bcrypt = require('bcryptjs');
 const dab = require("../database/models");
 const post = dab.Posteos
-const comm = dab.Usuarios
 const op = dab.Sequelize.Op
+const comm = dab.Comentarios
 
 const postController = {
     agregarPost: function(req, res) {

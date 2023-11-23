@@ -122,7 +122,7 @@ const indexController = {
         console.log(usuario)   
             .then(function (result) {
             
-                return res.send(result)
+                
                 res.render("MiPerfil", { datos: result })
             })
             .catch(error => console.log(error))
