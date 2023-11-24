@@ -60,6 +60,30 @@ const postController = {
             console.log(error);
         })
 
+    },
+    borrarPost: function (req,res) {
+        let idP = req.params.id
+
+        if(req.session.user != undefined){
+            comm.destroy({
+                where: {postId : idP}
+            })
+            .then(function(result){
+                post.destroy({
+                    where : {id2 : idP}
+                })
+            })
+            .then(function(result){
+                return res.redirect('/profile')
+            })
+            .catch(function(error){
+                return res.send(error)
+            })
+        }
+        else {
+            return res.render('/detail/:username')
+        }
+        
     }
 }
 
