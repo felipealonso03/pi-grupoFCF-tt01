@@ -38,7 +38,7 @@ CREATE TABLE `proyectointegrador`.`comentarios` (
   FOREIGN KEY (idPosteos) REFERENCES posteos(idPosteos),
   FOREIGN KEY (idUsuarios) REFERENCES usuarios(idUsuarios));
 
-/*USUARIOS*/
+
 
 INSERT INTO usuarios(idUsuarios, email, pass, fotoPerfil, fecha, dni,createdAt, updatedAt, deletedAt)
 VALUES(DEFAULT,'marting@gmail.com','marto221','https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png','2000-12-10',35089233,DEFAULT,DEFAULT,DEFAULT);
@@ -55,7 +55,7 @@ VALUES(DEFAULT,'leangigo@hotmail.com','dro34','https://i.insider.com/5fd3b419e00
 INSERT INTO usuarios(idUsuarios, email, pass, fotoPerfil, fecha, dni, createdAt, updatedAt, deletedAt)
 VALUES(DEFAULT,'gastonf@gmail.com','gasti202','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4kS474sV8KfwkcFeJiQxxWqz7e2rDVCyk5w&usqp=CAU','2003-11-28',40571727,DEFAULT,DEFAULT,DEFAULT);
 
-/*POSTEOS*/
+
 
 INSERT INTO posteos(idPosteos, nombreImagen,url, piePosteo, idUsuarios, createdAt, updatedAt, deletedAt) 
 VALUES(DEFAULT,'Ferrari 250 GTO (1962)','https://i.pinimg.com/564x/ac/f8/34/acf834ec57213dcdb6c15337501ecee8.jpg','Cuando el lujo se encuentra con la velocidad.', 1,DEFAULT,DEFAULT,DEFAULT);
@@ -88,55 +88,55 @@ INSERT INTO posteos(idPosteos, nombreImagen,url, piePosteo, idUsuarios, createdA
 VALUES(DEFAULT,'Toyota Celica GT-Four 1989','https://i.pinimg.com/564x/50/fa/88/50fa889def831c47e0f87148aa0e28e4.jpg',
 'El legado Toyota en el mundo de los deportivos.', 5,DEFAULT,DEFAULT,DEFAULT);
 
-/*COMENTARIOS*/
+
 
 INSERT INTO comentarios(idComentarios, textoComent,idPosteos, idUsuarios, createdAt, updatedAt, deletedAt) 
-VALUES(DEFAULT,'Obra de arte',1,1,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Increible',1,1,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Potencia tana',1,1,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Que hermosura',1,1,DEFAULT,DEFAULT,DEFAULT),
-/*Segundo post*/
-(DEFAULT,'MASERATI POWER',2,1,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Que ganas de sacarlo a rodar',2,1,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Elegancia',2,1,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Amazing designe',2,1,DEFAULT,DEFAULT,DEFAULT),
-/*Tercer post*/
-(DEFAULT,'Italian beauty',3,2,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Grandisimo',3,2,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Que año es?',3,2,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'A la venta?',3,2,DEFAULT,DEFAULT,DEFAULT),
-/*Cuarto post*/
-(DEFAULT,'Sueño hecho realidad',4,2,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Que belleza por favorr',4,2,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Podria usarlo todo el dia',4,2,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'DEUS',4,2,DEFAULT,DEFAULT,DEFAULT),
-/*Quinto post*/
-(DEFAULT,'Dios solo te pido una bendicion como esta',5,3,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'De lo mejor que vi',5,3,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Arte puro',5,3,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Bond, James Bond',5,3,DEFAULT,DEFAULT,DEFAULT),
-/*Sexto post*/
-(DEFAULT,'Potencia alemana',6,3,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Increible el paso del tiempo',6,3,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Elegancia y poder',6,3,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Cuantos caballos tiene??',6,3,DEFAULT,DEFAULT,DEFAULT),
-/*Septimo post*/
-(DEFAULT,'The Shelby empire',7,4,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Grandioso',7,4,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Los detalles en cada aspecto son increibles',7,4,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Una verdadera locura',7,4,DEFAULT,DEFAULT,DEFAULT),
-/*Octavo post*/
-(DEFAULT,'Y pensar que hacian tractores',8,4,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'En el lambo escuchando samba',8,4,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Que lindo bicho',8,4,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Rum rummm',8,4,DEFAULT,DEFAULT,DEFAULT),
-/*Noveno post*/
-(DEFAULT,'70s deluxe',9,5,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Que buena epoca',9,5,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Un juguete de primera',9,5,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Increible',9,5,DEFAULT,DEFAULT,DEFAULT),
-/*Decimo post*/
-(DEFAULT,'Japoneses a la carga',10,5,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Indestructible',10,5,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Imparable',10,5,DEFAULT,DEFAULT,DEFAULT),
-(DEFAULT,'Los japoneses siempre fueron superiores',10,5,DEFAULT,DEFAULT,DEFAULT);
+VALUES(DEFAULT,'Obra de arte',1,2,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Increible',1,3,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Potencia tana',1,4,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Que hermosura',1,5,DEFAULT,DEFAULT,DEFAULT),
+
+(DEFAULT,'MASERATI POWER',2,2,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Que ganas de sacarlo a rodar',2,3,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Elegancia',2,5,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Amazing designe',2,4,DEFAULT,DEFAULT,DEFAULT),
+
+(DEFAULT,'Italian beauty',3,5,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Grandisimo',3,4,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Que año es?',3,3,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'A la venta?',3,1,DEFAULT,DEFAULT,DEFAULT),
+
+(DEFAULT,'Sueño hecho realidad',4,1,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Que belleza por favorr',4,4,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Podria usarlo todo el dia',4,5,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'DEUS',4,3,DEFAULT,DEFAULT,DEFAULT),
+
+(DEFAULT,'Dios solo te pido una bendicion como esta',5,4,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'De lo mejor que vi',5,2,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Arte puro',5,1,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Bond, James Bond',5,5,DEFAULT,DEFAULT,DEFAULT),
+
+(DEFAULT,'Potencia alemana',6,1,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Increible el paso del tiempo',6,5,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Elegancia y poder',6,4,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Cuantos caballos tiene??',6,2,DEFAULT,DEFAULT,DEFAULT),
+
+(DEFAULT,'The Shelby empire',7,5,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Grandioso',7,2,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Los detalles en cada aspecto son increibles',7,3,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Una verdadera locura',7,1,DEFAULT,DEFAULT,DEFAULT),
+
+(DEFAULT,'Y pensar que hacian tractores',8,3,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'En el lambo escuchando samba',8,2,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Que lindo bicho',8,5,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Rum rummm',8,1,DEFAULT,DEFAULT,DEFAULT),
+
+(DEFAULT,'70s deluxe',9,4,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Que buena epoca',9,1,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Un juguete de primera',9,2,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Increible',9,3,DEFAULT,DEFAULT,DEFAULT),
+
+(DEFAULT,'Japoneses a la carga',10,2,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Indestructible',10,1,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Imparable',10,4,DEFAULT,DEFAULT,DEFAULT),
+(DEFAULT,'Los japoneses siempre fueron superiores',10,3,DEFAULT,DEFAULT,DEFAULT);
