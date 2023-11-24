@@ -128,8 +128,14 @@ main {
   margin-right: 10px;
   font-size: 25px;
 }
+
+.post-comentarios h2{
+  color: #000;
+}
+
 .post-comentarios li {
   margin-bottom: 10px;
+  color: rgb(55, 55, 55);
 }
 .post-comentarios li a {
   margin-right: 10px;
@@ -186,6 +192,7 @@ main {
   margin-top: 20px;
   padding-top: 10px;
   border-top: 1px solid #ddd;
+  color: rgb(55, 55, 55);
 }
 .comment {
   display: flex;
