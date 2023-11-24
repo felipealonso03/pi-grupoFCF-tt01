@@ -115,7 +115,7 @@ main {
 .info-usuario img {
   margin-right: 10px;
   border-radius: 90%;
-  padding: 20px;
+  padding: 1px;
   border: 2px solid chocolate;
 }
 .post-reacciones {
@@ -291,7 +291,9 @@ main {
 }
 .profile {
   border-radius: 90%;
-  border: 2px solid chocolate;
+  border: 3px solid chocolate;
+  width: 100px;
+  height: 100px;
 }
 
 .user-detail .meta {
@@ -338,4 +340,7 @@ i{
 .fotoDePerfil{
   width: 40px;
   height: 40px;
+}
+h3{
+  color: #000;
 }

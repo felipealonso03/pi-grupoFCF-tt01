@@ -18,10 +18,11 @@
         <div class="post-detail container">
             <section class="center main-content post">
                 <div class="info-usuario">
-                    <img src="https://via.placeholder.com/40" alt="">
-                    <p><a href="detalleUsuario.ejs"><%= post.id %></a></p>
+                    <img src="<%= post.postToUser.fotoPerfil %>" alt="" class="fotoDePerfil">
+                    <p><a href="/users/detail/<%= post.idUsuarios %>"><%= post.postToUser.email %></a></p>
                 </div>
                 <img class="photo" src="<%= post.url %>" alt="">
+                <h3><%= post.piePosteo %></h3>
             </section>
             <section class="right">
                 <h4>Comentarios</h4>
