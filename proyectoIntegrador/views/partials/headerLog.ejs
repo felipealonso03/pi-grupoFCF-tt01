@@ -11,12 +11,11 @@
         </div>
         <div class="navbar-right">
             <ul class="menu">
-
                 <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
 
                 <li><a href="/posteos/addpost"><i class="fa-regular fa-square-plus"></i></a></li>
 
-                <li><a href="/users/profile"><i class="fa-regular fa-user"></i></a></li>
+                <li><a href="/users/detail/<%= locals.user.idUsuarios %>"><i class="fa-regular fa-user"></i></a></li>
 
                 <form action="/logout" method="post">
 

@@ -17,9 +17,8 @@ const controladorUser = {
                     association:"usuariosToPost",
                     include: [{association:"postToComentario"}]
                 }
-            ]
+            ],order: [['usuariosToPost','createdAt', 'desc']]
         }).then((result)=> {
-            console.log(result)
             return res.render('detalleUsuario',{user:result, usuarioLog: true})
         })
         .catch((error) => {

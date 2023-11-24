@@ -32,9 +32,9 @@
             <section class="bottom">
                     <% for( let i = 0; i < user.usuariosToPost.length; i++ ) { %>
                         <article class="post">   
-                    
-                    <a href="/postDetail">
+                    <a href="/posteos/postDetail/ <%=user.usuariosToPost[i].idPosteos %>">
                         <img src="<%= user.usuariosToPost[i].url %>" alt="">
+                        <p><%= user.usuariosToPost[i].nombreImagen %></p>
                     </a>
                     </article>
                     <% } %>

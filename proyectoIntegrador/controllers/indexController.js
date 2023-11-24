@@ -6,7 +6,6 @@ const usuarios = dab.Usuarios
 
 const indexController = {
         indice: function(req, res) {
-
            let filtro = {
             include:[
                 {association:"postToUser"},
@@ -51,7 +50,6 @@ const indexController = {
  
              }
               else{
-                console.log(req.body.email,'Fede')
                  let user = {
                      email:req.body.email,
                      pass:bcrypt.hashSync(req.body.contrasena,10),
@@ -61,8 +59,6 @@ const indexController = {
                  }
                  dab.Usuarios.create(user)
                  .then(result => {
-                     console.log("---------------------------------------");
-                     console.log(result);
                      return res.redirect('/login')
                  })
                  .catch((error)=> {
@@ -99,7 +95,6 @@ const indexController = {
                         if (recordarme != undefined) {
                             res.cookie('userId',result.id,{edadMax:1000 * 60 * 5})
                         }
-                        console.log('LLegue')
                         return res.redirect("/")
                     } else {
                         return res.render("login")
@@ -117,12 +112,9 @@ const indexController = {
         },
         
     profile: function (req, res) {
-
         let usuario = req.session.user;
         post.findAll(usuario.idUsuarios)
             .then(function (result) {
-            
-                
                 res.render("MiPerfil", { datos: result })
             })
             .catch(error => console.log(error))
