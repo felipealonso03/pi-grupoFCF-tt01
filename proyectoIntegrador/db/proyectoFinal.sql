@@ -41,19 +41,20 @@ CREATE TABLE `proyectointegrador`.`comentarios` (
 
 
 INSERT INTO usuarios(idUsuarios, email, pass, fotoPerfil, fecha, dni,createdAt, updatedAt, deletedAt)
-VALUES(DEFAULT,'marting@gmail.com','marto221','https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png','2000-12-10',35089233,DEFAULT,DEFAULT,DEFAULT);
+VALUES(DEFAULT,'marting@gmail.com','$2a$10$Dm/8MeFev1LHZy2tpVcineRkcDzVEIY1EwECebzfAebHBJb/c8sJm','https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png','2000-12-10',35089233,DEFAULT,DEFAULT,DEFAULT);
 
 INSERT INTO usuarios(idUsuarios, email, pass, fotoPerfil, fecha, dni, createdAt, updatedAt, deletedAt)
-VALUES(DEFAULT,'marcosl@gmail.com','marquito','https://media.vogue.mx/photos/64e791e72497275ac48c75d1/master/w_1600%2Cc_limit/Ferrari.jpg','2010-12-21',30983333,DEFAULT,DEFAULT,DEFAULT);
+VALUES(DEFAULT,'marcosl@gmail.com','$2a$10$0z6TfYPyOywK.OOCKbjsC.anZ0LssoE4gI/fTjAU0su2lhN.oFXvW','https://media.vogue.mx/photos/64e791e72497275ac48c75d1/master/w_1600%2Cc_limit/Ferrari.jpg','2010-12-21',30983333,DEFAULT,DEFAULT,DEFAULT);
 
 INSERT INTO usuarios(idUsuarios, email, pass, fotoPerfil, fecha, dni, createdAt, updatedAt, deletedAt)
-VALUES(DEFAULT,'leon@gmail.com','leo323','https://s1.eestatic.com/2023/01/29/motor/737436563_230499300_1706x960.jpg','2022-02-01',20343455,DEFAULT,DEFAULT,DEFAULT);
+VALUES(DEFAULT,'leon@gmail.com','$2a$10$33Vkybg0fJCHgp5qOJe9Wu0vjb6mqrM4acSr3ulwrOfFbOc/DtlX2','https://s1.eestatic.com/2023/01/29/motor/737436563_230499300_1706x960.jpg','2022-02-01',20343455,DEFAULT,DEFAULT,DEFAULT);
 
 INSERT INTO usuarios(idUsuarios, email, pass, fotoPerfil, fecha, dni, createdAt, updatedAt, deletedAt)
-VALUES(DEFAULT,'leangigo@hotmail.com','dro34','https://i.insider.com/5fd3b419e00bce00188badcc?width=1136&format=jpeg','1999-02-10',38889121,DEFAULT,DEFAULT,DEFAULT);
+VALUES(DEFAULT,'leangigo@hotmail.com','$2a$10$LaSVm9sRS8Vl6CGOfNgaGebGomR335QT57qBd9p/.4m9nJVo0EjZG','https://i.insider.com/5fd3b419e00bce00188badcc?width=1136&format=jpeg','1999-02-10',38889121,DEFAULT,DEFAULT,DEFAULT);
 
 INSERT INTO usuarios(idUsuarios, email, pass, fotoPerfil, fecha, dni, createdAt, updatedAt, deletedAt)
-VALUES(DEFAULT,'gastonf@gmail.com','gasti202','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4kS474sV8KfwkcFeJiQxxWqz7e2rDVCyk5w&usqp=CAU','2003-11-28',40571727,DEFAULT,DEFAULT,DEFAULT);
+VALUES(DEFAULT,'gastonf@gmail.com','$2a$10$ZI9m2ee7I0SKioh4KIpFi.K2XjA/Uexo.YQL4C7BxnuP3J138ATbS','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4kS474sV8KfwkcFeJiQxxWqz7e2rDVCyk5w&usqp=CAU','2003-11-28',40571727,DEFAULT,DEFAULT,DEFAULT);
+
 
 
 
